@@ -25,5 +25,5 @@ To use this application, you must have MongoDB, Node.js and Express.js installed
     </ul>
 </ul>
 
-![Here](https://gifs.com/gif/plantgif-lx06w1)
+![Here](https://j.gifs.com/lx06w1.gif)
 
