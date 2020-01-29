@@ -1,0 +1,15 @@
+Plant BG: https://unsplash.com/photos/bBiuSdck8tU
+
+Plant Icons:
+View All Plants: https://www.flaticon.com/free-icon/plant_459812
+Add Plant: https://www.flaticon.com/free-icon/plant_1198654#term=plant&page=1&position=67
+Update Existing Plant: https://www.flaticon.com/free-icon/watering_1930172#term=plants&page=3&position=80
+Remove Plant: https://www.flaticon.com/free-icon/plants_550215#term=dead%20plant&page=1&position=1
+
+Plant BG: 
+    https://unsplash.com/photos/eA2z1JSzZFI?like_photo=true
+    https://unsplash.com/photos/bmM_IdLd1SA
+    https://unsplash.com/photos/70l1tDAI6rM
+    https://unsplash.com/photos/KamSS2euCzA
+    
+
