@@ -1,0 +1,22 @@
+//- Updating one specific plant to send back to database
+
+extends layout
+block content
+    .text-center
+        h4.display-4 Update This Plant
+        form(action='/updatedPlant', method='put').form-group
+            .row
+                each p in plant
+                    .col
+                        |Name:&nbsp;#{p.plantName}
+                        br
+                        |Nickname:
+                        input(type='text' name='newNickname' required).form-control
+                        br
+                        |Lighting:&nbsp;#{p.plantLight}
+                        br
+                        |Repotting Schedule:&nbsp;#{p.repotSch}
+                        br
+                        |Watering Schedule:&nbsp;#{p.waterSch}
+                        br
+                        input(type='submit' value='Update Plant').form-control.btn.btn-success

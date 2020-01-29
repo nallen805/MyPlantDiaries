@@ -1,0 +1,29 @@
+extends layout
+block append header
+    script(src='../javascripts/jquery-3.3.1.js')
+    script(src='../javascripts/bootstrap.bundle.js')
+    script(src='../javascripts/jsFunctions.js')
+    script
+        | $(function()
+        |    {
+        |        $('[data-toggle="tooltip"]').tooltip();
+        |    });
+block append content
+    body#adminBG.img-fluid
+    h4.text-left Welcome, Admin
+    br
+    .row
+        .col
+            a(href='/viewAll')
+                img(src='../images/plant.png' data-toggle='tooltip' data-placement='top' title='View All Plants').img-fluid.img-thumbnail
+        .col
+            a(href='/addPlant')
+                img(src='../images/addPlant.png' data-toggle='tooltip' data-placement='top' title='Add a Plant').img-fluid.img-thumbnail
+        .col
+            a(href='/updatePlant')
+                img(src='../images/watering.png' data-toggle='tooltip' data-placement='top' title='Edit a Plant').img-fluid.img-thumbnail
+        .col
+            a(href='/removePlant')
+                img(src='../images/plants.png' data-toggle='tooltip' data-placement='top' title='Remove a Plant').img-fluid.img-thumbnail
+    h6.text-right 
+        a(href='/') Logout

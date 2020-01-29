@@ -1,0 +1,24 @@
+//- View all plants
+extends layout
+block append content
+    body#allPlantsBG
+    h4.display-4.text-center
+        |#{message}
+    br
+    .row
+        each p in plant
+            .col-md-3.plantDeco
+                |Name:&nbsp;#{p.plantName}
+                br
+                |Nickname:&nbsp;#{p.plantNickname}
+                br
+                |Lighting:&nbsp;#{p.plantLight}
+                br
+                |Repotting Schedule:&nbsp;#{p.repotSch}
+                br
+                |Watering Schedule:&nbsp;#{p.waterSch}
+                br
+                br
+    h6.text-right
+        a(href='/adminWelcome') Back
+                

@@ -1,0 +1,14 @@
+//-Home page
+extends layout
+block append content
+    body#plantBG
+        .text-center
+            h6.text-danger
+                |#{message}
+            form(action='/adminWelcome' method='post')#form.form-group
+                br
+                input(type='text' name='adminUser' placeholder='Username' required).form-control
+                br
+                input(type='password' name='adminPass' placeholder='Password' required).form-control
+                br
+                button(type='submit').btn-primary.form-control Login

@@ -1,0 +1,62 @@
+//- Add Plant
+extends layout
+block append header
+    link(rel='stylesheet' href='../javascripts/jquery-ui/jquery-ui.css')
+    script(src='../javascripts/jquery-3.3.1.js')
+    script(src='../javascripts/jquery-ui/jquery-ui.js')
+    script(src='../javascripts/jsFunctions.js')
+block append content
+    body#addPlantBG.img-fluid
+    .text-center
+        h4.display-4
+            |#{message}
+        form(action='/addPlant', method='post')
+            .form-row.form-group
+                label Plant Name:
+                input(type='text' name='plantName' required).form-control
+                br
+                label Plant Nickname:
+                input(type='text' name='plantNickname').form-control
+                br
+                label Plant Lighting:
+                select(name='lighting' required).form-control
+                    option(value='Select...') Select
+                    option(value='Low' name='lightOpt') Low
+                    option(value='Medium' name='lightOpt') Medium
+                    option(value='High' name='lightOpt') High
+            br
+            .form-row.form-group
+                label Repotting Schedule:
+                select(name='repotSch' required).form-control
+                    option(value='Select...') Select
+                    option(value='3 months' name='repotOpt') 3 months
+                    option(value='6 months' name='repotOpt') 6 months
+                    option(value='9 months' name='repotOpt') 9 months
+                    option(value='Yearly'  name='repotOpt')   Yearly
+                    option(value='2 years' name='repotOpt')  2 years
+                br
+                label Last Repot:
+                input(type='text' name='lastRepot' onchange='repotSelection()' required)#datePicker.form-control
+                br
+                label Next Repot:
+                //-output(name='repot') 
+                #nextRepotCalc
+            .form-row.form-group
+                label Watering Schedule: 
+                select(name='waterSch').form-control
+                    option(value='Select...') Select
+                    option(value='Daily' name='waterOpt') Daily
+                    option(value='Weekly' name='waterOpt') Once a week
+                    option(value='Bi-weekly' name='waterOpt') Bi-weekly
+                    option(value='Monthly' name='waterOpt') Monthly
+                br
+                label Last Water:
+                input(type='text' name='lastWater' onchange='waterSelection()' required)#waterDP.form-control
+                br
+                label Next Water:
+                #nextWaterCalc
+            br
+            br
+            input(type='submit' value='Add Plant').form-control.btn-success
+    h6.text-right
+        a(href='/adminWelcome') Back
